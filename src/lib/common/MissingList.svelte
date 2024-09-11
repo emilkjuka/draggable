@@ -12,6 +12,10 @@
   <div> {title} {$missing?.length}</div>
   <div class="list w-[300px] h-[400px] border-2 border-gray-800 rounded-md p-4 flex flex-col gap-2" use:dropzone={{on_dropzone(name: string) {
 
+
+    if($missing.find((p) => p.name === name)) {
+      return
+    }
     const pokemon = $caught.find((p) => p.name === name) as Pokemon;
 
     const caughtUpdated = $caught.filter((p) => p.name !== name)

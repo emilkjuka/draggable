@@ -6,10 +6,10 @@
   import { onMount } from "svelte";
 
   const pokemons = [
-    { name: "Pikachu", sprite: "", types: ["lightning"] },
-    { name: "Charmander", sprite: "", types: ["lightning"] },
-    { name: "Bulbasaur", sprite: "", types: ["lightning"] },
-    { name: "Diglet", sprite: "", types: ["lightning"] },
+    { name: "Pikachu", sprite: "", types: ["lightning"], state: "missing" },
+    { name: "Charmander", sprite: "", types: ["lightning"], state: "missing" },
+    { name: "Bulbasaur", sprite: "", types: ["lightning"], state: "missing" },
+    { name: "Diglet", sprite: "", types: ["lightning"], state: "missing" },
   ];
   onMount(() => {
     missing.set(pokemons);
